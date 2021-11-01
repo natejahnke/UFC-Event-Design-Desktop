@@ -1,0 +1,629 @@
+html {
+  /* Setting a base font size of 10px give us easier rem calculations
+       Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+     */
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.6rem;
+  /* line-height: 1.5; */
+  text-align: center;
+  color: white;
+  margin: 0;
+  background-color: #252727;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+.ufc-title {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+.event-header {
+  width: 1441px;
+}
+
+.event-name {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* Grid */
+.container {
+  display: grid;
+  margin: auto;
+  max-width: 1441px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 213px 38px 110px 38px 110px 38px 110px;
+  gap: 5px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "event-header event-header event-header event-header event-header"
+    "maincard-banner maincard-banner maincard-banner maincard-banner maincard-banner"
+    "maincard maincard maincard maincard maincard"
+    "prelims-banner prelims-banner prelims-banner prelims-banner prelims-banner"
+    "prelims prelims prelims prelims prelims"
+    "earlyprelims-banner earlyprelims-banner earlyprelims-banner earlyprelims-banner earlyprelims-banner"
+    "earlyprelims earlyprelims earlyprelims earlyprelims earlyprelims";
+}
+
+.event-header {
+  /* background-color: #403d3d; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 5px 5px;
+  grid-template-areas: "profile-image-left event-info profile-image-right";
+  grid-area: event-header;
+}
+
+.event-info {
+  /* background-color: #403d3d; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 90px 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "event-number event-names-column event-details"
+    "fighter-name-left profile-stats fighter-name-right";
+  grid-area: event-info;
+}
+
+.event-number {
+  grid-area: event-number;
+}
+
+.event-details {
+  grid-area: event-details;
+}
+
+.fighter-name-left {
+  grid-area: fighter-name-left;
+}
+
+.fighter-name-right {
+  grid-area: fighter-name-right;
+}
+
+.event-names-column {
+  grid-area: event-names-column;
+}
+
+.event-banner {
+  grid-area: event-banner;
+}
+
+.profile-image-left {
+  grid-area: profile-image-left;
+}
+
+.profile-stats {
+  grid-area: profile-stats;
+}
+
+.profile-image-right {
+  grid-area: profile-image-right;
+}
+
+.maincard-banner {
+  grid-area: maincard-banner;
+}
+
+.maincard {
+  display: grid;
+  display: flex;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 284px));
+  grid-template-rows: 1fr;
+  gap: 5px 5px;
+  text-align: center;
+  grid-auto-flow: row;
+  grid-template-areas: "maincard-fight1 maincard-fight2 maincard-fight3 maincard-fight4 maincard-figh5";
+  grid-area: maincard;
+}
+
+.maincard-fight1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  /* gap: 0px 0px; */
+  grid-auto-flow: row;
+  grid-template-areas: "maincard-fight1-left maincard-fight1-right";
+  grid-area: maincard-fight1;
+}
+
+.maincard-fight1-left {
+  grid-area: maincard-fight1-left;
+}
+
+.maincard-fight1-right {
+  grid-area: maincard-fight1-right;
+}
+
+.maincard-fight2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "maincard-fight2-left maincard-fight2-right";
+  grid-area: maincard-fight2;
+}
+
+.maincard-fight2-left {
+  grid-area: maincard-fight2-left;
+}
+
+.maincard-fight2-right {
+  grid-area: maincard-fight2-right;
+}
+
+.maincard-fight3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "maincard-fight3-left maincard-fight3-right";
+  grid-area: maincard-fight3;
+}
+
+.maincard-fight3-left {
+  grid-area: maincard-fight3-left;
+}
+
+.maincard-fight3-right {
+  grid-area: maincard-fight3-right;
+}
+
+.maincard-fight4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "maincard-fight4-left maincard-fight4-right";
+  grid-area: maincard-fight4;
+}
+
+.maincard-fight4-left {
+  grid-area: maincard-fight4-left;
+}
+
+.maincard-fight4-right {
+  grid-area: maincard-fight4-right;
+}
+
+.maincard-figh5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "maincard-fight5-left maincard-fight5-right";
+  grid-area: maincard-figh5;
+}
+
+.maincard-fight5-left {
+  grid-area: maincard-fight5-left;
+}
+
+.maincard-fight5-right {
+  grid-area: maincard-fight5-right;
+}
+
+.prelims {
+  display: grid;
+  display: flex;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 284px));
+  grid-template-rows: 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  grid-template-areas: "prelims-fight1 prelims-fight2 prelims-fight3 prelims-fight4 prelims-figh5";
+  grid-area: prelims;
+}
+
+.prelims-fight1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  /* gap: 0px 0px; */
+  grid-auto-flow: row;
+  grid-template-areas: "prelims-fight1-left prelims-fight1-right";
+  grid-area: prelims-fight1;
+}
+
+.prelims-fight1-left {
+  grid-area: prelims-fight1-left;
+}
+
+.prelims-fight1-right {
+  grid-area: prelims-fight1-right;
+}
+
+.prelims-fight2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "prelims-fight2-left prelims-fight2-right";
+  grid-area: prelims-fight2;
+}
+
+.prelims-fight2-left {
+  grid-area: prelims-fight2-left;
+}
+
+.prelims-fight2-right {
+  grid-area: prelims-fight2-right;
+}
+
+.prelims-fight3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "prelims-fight3-left prelims-fight3-right";
+  grid-area: prelims-fight3;
+}
+
+.prelims-fight3-left {
+  grid-area: prelims-fight3-left;
+}
+
+.prelims-fight3-right {
+  grid-area: prelims-fight3-right;
+}
+
+.prelims-fight4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "prelims-fight4-left prelims-fight4-right";
+  grid-area: prelims-fight4;
+}
+
+.prelims-fight4-left {
+  grid-area: prelims-fight4-left;
+}
+
+.prelims-fight4-right {
+  grid-area: prelims-fight4-right;
+}
+
+.prelims-figh5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "prelims-fight5-left prelims-fight5-right";
+  grid-area: prelims-figh5;
+}
+
+.prelims-fight5-left {
+  grid-area: prelims-fight5-left;
+}
+
+.prelims-fight5-right {
+  grid-area: prelims-fight5-right;
+}
+
+.prelims-banner {
+  grid-area: prelims-banner;
+}
+
+.earlyprelims {
+  display: grid;
+  display: flex;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 284px));
+  grid-template-rows: 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  grid-template-areas: "earlyprelims-fight1 earlyprelims-fight2 earlyprelims-fight3 earlyprelims-fight4 earlyprelims-figh5";
+  grid-area: earlyprelims;
+}
+
+.earlyprelims-fight1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  /* gap: 0px 0px; */
+  grid-auto-flow: row;
+  grid-template-areas: "earlyprelims-fight1-left earlyprelims-fight1-right";
+  grid-area: earlyprelims-fight1;
+}
+
+.earlyprelims-fight1-left {
+  grid-area: earlyprelims-fight1-left;
+}
+
+.earlyprelims-fight1-right {
+  grid-area: earlyprelims-fight1-right;
+}
+
+.earlyprelims-fight2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "earlyprelims-fight2-left earlyprelims-fight2-right";
+  grid-area: earlyprelims-fight2;
+}
+
+.earlyprelims-fight2-left {
+  grid-area: earlyprelims-fight2-left;
+}
+
+.earlyprelims-fight2-right {
+  grid-area: earlyprelims-fight2-right;
+}
+
+.earlyprelims-fight3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "earlyprelims-fight3-left earlyprelims-fight3-right";
+  grid-area: earlyprelims-fight3;
+}
+
+.earlyprelims-fight3-left {
+  grid-area: earlyprelims-fight3-left;
+}
+
+.earlyprelims-fight3-right {
+  grid-area: earlyprelims-fight3-right;
+}
+
+.earlyprelims-fight4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "earlyprelims-fight4-left earlyprelims-fight4-right";
+  grid-area: earlyprelims-fight4;
+}
+
+.earlyprelims-fight4-left {
+  grid-area: earlyprelims-fight4-left;
+}
+
+.earlyprelims-fight4-right {
+  grid-area: earlyprelims-fight4-right;
+}
+
+.earlyprelims-figh5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "earlyprelims-fight5-left earlyprelims-fight5-right";
+  grid-area: earlyprelims-figh5;
+}
+
+.earlyprelims-fight5-left {
+  grid-area: earlyprelims-fight5-left;
+}
+
+.earlyprelims-fight5-right {
+  grid-area: earlyprelims-fight5-right;
+}
+
+.earlyprelims-banner {
+  grid-area: earlyprelims-banner;
+}
+
+.profile-image {
+  display: grid;
+  max-width: 284px;
+  gap: 5px;
+}
+
+.profile-image-left {
+  max-height: 250px;
+}
+
+.red-gradient {
+  background: linear-gradient(0deg,
+      rgba(64, 61, 61, 1) 10%,
+      rgba(239, 52, 50, 1) 100%);
+}
+
+.fighter-card-image {
+  width: 180px;
+}
+
+.maincard {
+  max-height: 135px;
+}
+
+.maincard-fight1 {
+  margin: 0;
+  padding: 0;
+}
+
+.fighter-left-overlay {
+  z-index: 2;
+  position: relative;
+}
+
+.fighter-right-shift {
+  position: relative;
+  left: -60px;
+}
+
+/* .maincard-banner {
+  /* display: grid;
+    /* max-height: 200px; 
+  background-color: #403d3d;
+  /* gap: 15px 5px; *
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+} */
+
+.fight-time-banner {
+  display: grid;
+  max-height: 200px;
+  background-color: #403d3d;
+  /* gap: 15px 5px; */
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.fight-box {
+  max-width: 284px;
+  min-width: 0;
+  overflow: hidden;
+  background: rgb(64, 61, 61);
+  background: linear-gradient(0deg,
+      rgba(64, 61, 61, 1) 10%,
+      rgba(239, 52, 50, 1) 100%);
+}
+
+/* Event Name, Main event, date/time and venue info. */
+
+.event-banner {
+  display: flex;
+  justify-content: center;
+  max-height: 100px;
+  /* font-size: 2em; */
+}
+
+.event-number {
+  background-color: #403d3d;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.event-details {
+  background-color: #403d3d;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.event-location {
+  display: flex;
+
+}
+
+.event-names-column {
+  background-color: #403d3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* line-height: 95%; */
+}
+
+.versus {
+  display: flex;
+  justify-content: center;
+}
+
+.event-fighter-name1 {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bolder;
+  position: relative;
+  bottom: -10px;
+}
+
+.event-fighter-name2 {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bolder;
+  position: relative;
+  bottom: 10px;
+}
+
+/* Fighter Stats for selected fighters */
+.profile-stats {
+  background-color: #403d3d;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 5px; */
+  /* margin-top: -20px; */
+}
+
+.stats-box-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100px;
+  color: hsl(0, 0%, 70%);
+}
+
+.stats-box-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100px;
+  color: hsl(0, 0%, 70%);
+}
+
+.stats-labels {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.fighter-name-left {
+  background-color: #403d3d;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.fighter-name-right {
+  background-color: #403d3d;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
