@@ -148,6 +148,7 @@ h2 {
   grid-auto-flow: row;
   grid-template-areas: "maincard-fight1-left maincard-fight1-right";
   grid-area: maincard-fight1;
+  position: relative;
 }
 
 .maincard-fight1-left {
@@ -460,13 +461,14 @@ h2 {
 }
 
 .fighter-left-overlay {
-  z-index: 2;
+  /* z-index: 2; */
   position: relative;
 }
 
 .fighter-right-shift {
-  position: relative;
+  position: absolute;
   left: -60px;
+  /* z-index: 3; */
 }
 
 /* .maincard-banner {
@@ -626,4 +628,105 @@ h2 {
   align-items: flex-end;
   font-weight: bold;
   letter-spacing: 2px;
+}
+
+/* Overlay */
+
+.parent {
+  position: relative;
+  left: -2%;
+  height: 137px;
+}
+
+.content .content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 2%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  z-index: 1;
+}
+
+.content:hover .content-overlay {
+  opacity: 1;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 26px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 2;
+}
+
+.content:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3 {
+  /* color: #fff; */
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 8px;
+}
+
+.fadeIn-bottom {
+  top: 80%;
+}
+
+/* Horitzontal rule VS */
+.enhanced-hr {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+}
+
+.enhanced-hr>span {
+  position: relative;
+  display: inline-block;
+}
+
+.enhanced-hr>span:before,
+.enhanced-hr>span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  height: 1px;
+  background: rgba(239, 52, 50, 1);
+}
+
+.enhanced-hr>span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.enhanced-hr>span:after {
+  left: 100%;
+  margin-left: 15px
 }
