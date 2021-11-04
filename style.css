@@ -51,17 +51,17 @@ h2 {
   margin: auto;
   max-width: 1441px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 213px 38px 110px 38px 110px 38px 110px;
+  grid-template-rows: 213px 38px 112px 38px 110px 38px 110px;
   gap: 5px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "event-header event-header event-header event-header event-header"
     "maincard-banner maincard-banner maincard-banner maincard-banner maincard-banner"
     "maincard maincard maincard maincard maincard"
-    "prelims-banner prelims-banner prelims-banner prelims-banner prelims-banner"
+    /* "prelims-banner prelims-banner prelims-banner prelims-banner prelims-banner"
     "prelims prelims prelims prelims prelims"
     "earlyprelims-banner earlyprelims-banner earlyprelims-banner earlyprelims-banner earlyprelims-banner"
-    "earlyprelims earlyprelims earlyprelims earlyprelims earlyprelims";
+    "earlyprelims earlyprelims earlyprelims earlyprelims earlyprelims" */;
 }
 
 .event-header {
@@ -127,15 +127,12 @@ h2 {
   grid-area: maincard-banner;
 }
 
-.maincard {
+/* .maincard {
   display: grid;
   display: flex;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(auto, 284px));
+  grid-template-columns: 1f 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 5px 5px;
-  text-align: center;
-  grid-auto-flow: row;
+  gap: 5px;
   grid-template-areas: "maincard-fight1 maincard-fight2 maincard-fight3 maincard-fight4 maincard-figh5";
   grid-area: maincard;
 }
@@ -144,7 +141,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  /* gap: 0px 0px; */
+  /* gap: 0px 0px; 
   grid-auto-flow: row;
   grid-template-areas: "maincard-fight1-left maincard-fight1-right";
   grid-area: maincard-fight1;
@@ -225,7 +222,7 @@ h2 {
 
 .maincard-fight5-right {
   grid-area: maincard-fight5-right;
-}
+} */
 
 .prelims {
   display: grid;
@@ -451,47 +448,65 @@ h2 {
   width: 180px;
 }
 
-.maincard {
+/* .maincard {
   max-height: 135px;
-}
+} */
 
-.maincard-fight1 {
+/* .maincard-fight1 {
   margin: 0;
   padding: 0;
-}
+} */
 
-.fighter-left-overlay {
-  /* z-index: 2; */
+/* .fighter-left-overlay {
+   z-index: 2; 
   position: relative;
 }
 
 .fighter-right-shift {
   position: absolute;
-  left: -60px;
-  /* z-index: 3; */
+  left: --8%;
+   z-index: 3; 
 }
+*/
 
-/* .maincard-banner {
-  /* display: grid;
-    /* max-height: 200px; 
-  background-color: #403d3d;
-  /* gap: 15px 5px; *
-  padding: 5px;
-  font-weight: bold;
-  font-size: 1.2em;
-} */
+ .maincard-banner {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  /* display: grid; */
+  /* width: 100%; */
+  /* width: auto; */
+  /* display: block; */
+  /* max-height: 200px;  */
+  /* background-color: #403d3d; */
+  /* gap: 15px 5px;  */
+  /* padding: 5px; */
+  /* font-weight: bold;
+  font-size: 1.2em; */
+} 
 
 .fight-time-banner {
-  display: grid;
-  max-height: 200px;
+  /* display: grid; */
+  /* max-height: 200px; */
   background-color: #403d3d;
   /* gap: 15px 5px; */
-  padding: 5px;
-  font-weight: bold;
-  font-size: 1.2em;
+  /* width: 100%; */
+  max-width: 1441px;
+  /* padding: 5px; */
+  /* font-weight: bold;
+  font-size: 1.2em; */
 }
 
-.fight-box {
+p {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 5px;
+}
+
+/* .fight-box {
   max-width: 284px;
   min-width: 0;
   overflow: hidden;
@@ -499,7 +514,7 @@ h2 {
   background: linear-gradient(0deg,
       rgba(64, 61, 61, 1) 10%,
       rgba(239, 52, 50, 1) 100%);
-}
+} */
 
 /* Event Name, Main event, date/time and venue info. */
 
@@ -639,7 +654,7 @@ h2 {
 }
 
 .content .content-overlay {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0,0,0,0.7);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -651,7 +666,7 @@ h2 {
   -webkit-transition: all 0.4s ease-in-out 0s;
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
-  z-index: 1;
+	z-index: 1;
 }
 
 .content:hover .content-overlay {
@@ -663,7 +678,7 @@ h2 {
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
-  padding-bottom: 26px;
+	padding-bottom: 26px;
   width: 100%;
   top: 50%;
   left: 50%;
@@ -674,7 +689,7 @@ h2 {
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
-  z-index: 2;
+	z-index: 2;
 }
 
 .content:hover .content-details {
@@ -684,7 +699,7 @@ h2 {
 }
 
 .content-details h3 {
-  /* color: #fff; */
+  color: #fff;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.15em;
@@ -729,4 +744,44 @@ h2 {
 .enhanced-hr>span:after {
   left: 100%;
   margin-left: 15px
+}
+
+/* Small fighter image style */
+.small-img{
+	width: 180px;
+}
+
+/* Overlap small image positioning */
+
+.over-img-left {
+  position: absolute;
+  left: 0%;
+}
+
+.over-img-right{
+  position: absolute;
+  right: -5%;
+}
+
+/* Grid for fight matchups */
+.maincard {
+	display: grid;
+  display: flex;
+	grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . . .";
+}
+
+.fight-container{
+	width: 284px;
+	height: 112px;
+	overflow: hidden;
+/* 	margin: 10px; */
+	background: rgb(64, 61, 61);
+	background: linear-gradient(
+		0deg,
+		rgba(64, 61, 61, 1) 10%,
+		rgba(239, 52, 50, 1) 100%
+	);
 }
