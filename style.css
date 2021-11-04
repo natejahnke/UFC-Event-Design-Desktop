@@ -7,11 +7,9 @@ html {
 }
 
 body {
-  /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Helvetica Neue", Arial, sans-serif;
   font-size: 1.6rem;
-  /* line-height: 1.5; */
   text-align: center;
   color: white;
   margin: 0;
@@ -58,14 +56,13 @@ h2 {
     "event-header event-header event-header event-header event-header"
     "maincard-banner maincard-banner maincard-banner maincard-banner maincard-banner"
     "maincard maincard maincard maincard maincard"
-    /* "prelims-banner prelims-banner prelims-banner prelims-banner prelims-banner"
+    "prelims-banner prelims-banner prelims-banner prelims-banner prelims-banner"
     "prelims prelims prelims prelims prelims"
     "earlyprelims-banner earlyprelims-banner earlyprelims-banner earlyprelims-banner earlyprelims-banner"
-    "earlyprelims earlyprelims earlyprelims earlyprelims earlyprelims" */;
+    "earlyprelims earlyprelims earlyprelims earlyprelims earlyprelims"; 
 }
 
 .event-header {
-  /* background-color: #403d3d; */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -75,7 +72,6 @@ h2 {
 }
 
 .event-info {
-  /* background-color: #403d3d; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 90px 1fr;
@@ -127,112 +123,7 @@ h2 {
   grid-area: maincard-banner;
 }
 
-/* .maincard {
-  display: grid;
-  display: flex;
-  grid-template-columns: 1f 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 5px;
-  grid-template-areas: "maincard-fight1 maincard-fight2 maincard-fight3 maincard-fight4 maincard-figh5";
-  grid-area: maincard;
-}
-
-.maincard-fight1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  /* gap: 0px 0px; 
-  grid-auto-flow: row;
-  grid-template-areas: "maincard-fight1-left maincard-fight1-right";
-  grid-area: maincard-fight1;
-  position: relative;
-}
-
-.maincard-fight1-left {
-  grid-area: maincard-fight1-left;
-}
-
-.maincard-fight1-right {
-  grid-area: maincard-fight1-right;
-}
-
-.maincard-fight2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "maincard-fight2-left maincard-fight2-right";
-  grid-area: maincard-fight2;
-}
-
-.maincard-fight2-left {
-  grid-area: maincard-fight2-left;
-}
-
-.maincard-fight2-right {
-  grid-area: maincard-fight2-right;
-}
-
-.maincard-fight3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "maincard-fight3-left maincard-fight3-right";
-  grid-area: maincard-fight3;
-}
-
-.maincard-fight3-left {
-  grid-area: maincard-fight3-left;
-}
-
-.maincard-fight3-right {
-  grid-area: maincard-fight3-right;
-}
-
-.maincard-fight4 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "maincard-fight4-left maincard-fight4-right";
-  grid-area: maincard-fight4;
-}
-
-.maincard-fight4-left {
-  grid-area: maincard-fight4-left;
-}
-
-.maincard-fight4-right {
-  grid-area: maincard-fight4-right;
-}
-
-.maincard-figh5 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "maincard-fight5-left maincard-fight5-right";
-  grid-area: maincard-figh5;
-}
-
-.maincard-fight5-left {
-  grid-area: maincard-fight5-left;
-}
-
-.maincard-fight5-right {
-  grid-area: maincard-fight5-right;
-} */
-
 .prelims {
-  display: grid;
-  display: flex;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(auto, 284px));
-  grid-template-rows: 1fr;
-  gap: 5px 5px;
-  grid-auto-flow: row;
-  grid-template-areas: "prelims-fight1 prelims-fight2 prelims-fight3 prelims-fight4 prelims-figh5";
   grid-area: prelims;
 }
 
@@ -240,7 +131,6 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  /* gap: 0px 0px; */
   grid-auto-flow: row;
   grid-template-areas: "prelims-fight1-left prelims-fight1-right";
   grid-area: prelims-fight1;
@@ -327,101 +217,7 @@ h2 {
 }
 
 .earlyprelims {
-  display: grid;
-  display: flex;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(auto, 284px));
-  grid-template-rows: 1fr;
-  gap: 5px 5px;
-  grid-auto-flow: row;
-  grid-template-areas: "earlyprelims-fight1 earlyprelims-fight2 earlyprelims-fight3 earlyprelims-fight4 earlyprelims-figh5";
   grid-area: earlyprelims;
-}
-
-.earlyprelims-fight1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  /* gap: 0px 0px; */
-  grid-auto-flow: row;
-  grid-template-areas: "earlyprelims-fight1-left earlyprelims-fight1-right";
-  grid-area: earlyprelims-fight1;
-}
-
-.earlyprelims-fight1-left {
-  grid-area: earlyprelims-fight1-left;
-}
-
-.earlyprelims-fight1-right {
-  grid-area: earlyprelims-fight1-right;
-}
-
-.earlyprelims-fight2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "earlyprelims-fight2-left earlyprelims-fight2-right";
-  grid-area: earlyprelims-fight2;
-}
-
-.earlyprelims-fight2-left {
-  grid-area: earlyprelims-fight2-left;
-}
-
-.earlyprelims-fight2-right {
-  grid-area: earlyprelims-fight2-right;
-}
-
-.earlyprelims-fight3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "earlyprelims-fight3-left earlyprelims-fight3-right";
-  grid-area: earlyprelims-fight3;
-}
-
-.earlyprelims-fight3-left {
-  grid-area: earlyprelims-fight3-left;
-}
-
-.earlyprelims-fight3-right {
-  grid-area: earlyprelims-fight3-right;
-}
-
-.earlyprelims-fight4 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "earlyprelims-fight4-left earlyprelims-fight4-right";
-  grid-area: earlyprelims-fight4;
-}
-
-.earlyprelims-fight4-left {
-  grid-area: earlyprelims-fight4-left;
-}
-
-.earlyprelims-fight4-right {
-  grid-area: earlyprelims-fight4-right;
-}
-
-.earlyprelims-figh5 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "earlyprelims-fight5-left earlyprelims-fight5-right";
-  grid-area: earlyprelims-figh5;
-}
-
-.earlyprelims-fight5-left {
-  grid-area: earlyprelims-fight5-left;
-}
-
-.earlyprelims-fight5-right {
-  grid-area: earlyprelims-fight5-right;
 }
 
 .earlyprelims-banner {
@@ -448,73 +244,20 @@ h2 {
   width: 180px;
 }
 
-/* .maincard {
-  max-height: 135px;
-} */
-
-/* .maincard-fight1 {
-  margin: 0;
-  padding: 0;
-} */
-
-/* .fighter-left-overlay {
-   z-index: 2; 
-  position: relative;
-}
-
-.fighter-right-shift {
-  position: absolute;
-  left: --8%;
-   z-index: 3; 
-}
-*/
-
- .maincard-banner {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-  /* display: grid; */
-  /* width: 100%; */
-  /* width: auto; */
-  /* display: block; */
-  /* max-height: 200px;  */
-  /* background-color: #403d3d; */
-  /* gap: 15px 5px;  */
-  /* padding: 5px; */
-  /* font-weight: bold;
-  font-size: 1.2em; */
-} 
 
 .fight-time-banner {
-  /* display: grid; */
-  /* max-height: 200px; */
+  display: flex;
+   justify-content: center;
+   align-items: center;
   background-color: #403d3d;
-  /* gap: 15px 5px; */
-  /* width: 100%; */
   max-width: 1441px;
-  /* padding: 5px; */
-  /* font-weight: bold;
-  font-size: 1.2em; */
 }
 
 p {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   font-weight: bold;
   font-size: 1.2em;
   padding: 5px;
 }
-
-/* .fight-box {
-  max-width: 284px;
-  min-width: 0;
-  overflow: hidden;
-  background: rgb(64, 61, 61);
-  background: linear-gradient(0deg,
-      rgba(64, 61, 61, 1) 10%,
-      rgba(239, 52, 50, 1) 100%);
-} */
 
 /* Event Name, Main event, date/time and venue info. */
 
@@ -522,7 +265,6 @@ p {
   display: flex;
   justify-content: center;
   max-height: 100px;
-  /* font-size: 2em; */
 }
 
 .event-number {
@@ -558,7 +300,6 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* line-height: 95%; */
 }
 
 .versus {
@@ -592,8 +333,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 5px; */
-  /* margin-top: -20px; */
 }
 
 .stats-box-left {
@@ -764,7 +503,7 @@ p {
 }
 
 /* Grid for fight matchups */
-.maincard {
+.fight-grid {
 	display: grid;
   display: flex;
 	grid-gap: 5px;
@@ -777,7 +516,6 @@ p {
 	width: 284px;
 	height: 112px;
 	overflow: hidden;
-/* 	margin: 10px; */
 	background: rgb(64, 61, 61);
 	background: linear-gradient(
 		0deg,
