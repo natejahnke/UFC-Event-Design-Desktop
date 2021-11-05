@@ -7,8 +7,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 1.6rem;
   text-align: center;
   color: white;
@@ -59,7 +58,7 @@ h2 {
     "prelims-banner prelims-banner prelims-banner prelims-banner prelims-banner"
     "prelims prelims prelims prelims prelims"
     "earlyprelims-banner earlyprelims-banner earlyprelims-banner earlyprelims-banner earlyprelims-banner"
-    "earlyprelims earlyprelims earlyprelims earlyprelims earlyprelims"; 
+    "earlyprelims earlyprelims earlyprelims earlyprelims earlyprelims";
 }
 
 .event-header {
@@ -247,8 +246,8 @@ h2 {
 
 .fight-time-banner {
   display: flex;
-   justify-content: center;
-   align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: #403d3d;
   max-width: 1441px;
 }
@@ -291,7 +290,7 @@ p {
 
 .event-location {
   display: flex;
-
+  filter: brightness(80%);
 }
 
 .event-names-column {
@@ -393,7 +392,7 @@ p {
 }
 
 .content .content-overlay {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -405,7 +404,7 @@ p {
   -webkit-transition: all 0.4s ease-in-out 0s;
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
-	z-index: 1;
+  z-index: 1;
 }
 
 .content:hover .content-overlay {
@@ -417,7 +416,7 @@ p {
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
-	padding-bottom: 26px;
+  padding-bottom: 26px;
   width: 100%;
   top: 50%;
   left: 50%;
@@ -428,7 +427,7 @@ p {
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
-	z-index: 2;
+  z-index: 2;
 }
 
 .content:hover .content-details {
@@ -486,8 +485,8 @@ p {
 }
 
 /* Small fighter image style */
-.small-img{
-	width: 180px;
+.small-img {
+  width: 180px;
 }
 
 /* Overlap small image positioning */
@@ -497,29 +496,27 @@ p {
   left: 0%;
 }
 
-.over-img-right{
+.over-img-right {
   position: absolute;
   right: -5%;
 }
 
 /* Grid for fight matchups */
 .fight-grid {
-	display: grid;
+  display: grid;
   display: flex;
-	grid-gap: 5px;
+  grid-gap: 5px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: ". . . .";
 }
 
-.fight-container{
-	width: 284px;
-	height: 112px;
-	overflow: hidden;
-	background: rgb(64, 61, 61);
-	background: linear-gradient(
-		0deg,
-		rgba(64, 61, 61, 1) 10%,
-		rgba(239, 52, 50, 1) 100%
-	);
+.fight-container {
+  width: 284px;
+  height: 112px;
+  overflow: hidden;
+  background: rgb(64, 61, 61);
+  background: linear-gradient(0deg,
+      rgba(64, 61, 61, 1) 10%,
+      rgba(239, 52, 50, 1) 100%);
 }
